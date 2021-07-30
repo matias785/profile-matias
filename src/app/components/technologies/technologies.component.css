@@ -4,6 +4,23 @@
 
 
 img {
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
+}
+.card {
+  opacity: 1;
+  filter: alpha(opacity=50);
+  zoom: 1;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=100);
+  zoom: 1;
+}
+
+div.row.d-flex {
+  margin: 50px
 }

@@ -12,16 +12,21 @@ const routes: Routes = [
   {path: '', component: MainComponent,
   pathMatch: 'full'},
   {path: 'main', component: MainComponent},
-  {path: 'dashboard', component: DashboardComponent,},
-  {path: 'projects', component: ProjectsComponent},
-  {path: 'technologies', component: TechnologiesComponent},
-  {path: 'training', component: TrainingComponent},
-  {path: 'contact', component: ContactComponent},
-  {path: 'about', component: AboutComponent}
+  {path: 'dashboard', component: DashboardComponent,
+    children: [
+      {path: "", component: AboutComponent, pathMatch: 'full'},
+      {path: "about", component: AboutComponent},
+      {path: 'projects', component : ProjectsComponent},
+      {path: "technologies", component: TechnologiesComponent},
+      {path: "training", component: TrainingComponent},
+      {path: "contact", component: ContactComponent}
+    ]
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: []
 })
 export class AppRoutingModule { }

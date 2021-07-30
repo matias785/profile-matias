@@ -1,23 +1,28 @@
-:root {
-  --primary: #9a3b3b;
-  --light: #ffff;
-  --grey: #efefef;
+
+
+
+.items {
+  text-align: start;
 }
 
-body {
-  overflow: hidden;
-  font-family: 'Mulish', sans-seif;
-  font-weight: 300;
-  color: var(--primary);
-}
 a {
+  color: #efefef;
   text-decoration: none;
+  letter-spacing: 1px;
+  text-align: end;
 }
 
-.bg-primary { background-color: var(--primary) !important;}
+a:hover {
+  color: black;
+  text-decoration: none;
+  background: #ffa43a;
+  font-size: x-large;
+}
+
 
 #sidebar-container {
   min-height: 100vh;
+  background: rgba(82, 85, 88, 0.6);
 }
 
 #sidebar-container .log {
@@ -25,9 +30,13 @@ a {
 }
 
 #sidebar-container .menu {
-  width: 18rem;
+  width: auto;
 }
 
 i {
   margin-right: 15px;
+}
+
+a {
+  opacity: revert;
 }
